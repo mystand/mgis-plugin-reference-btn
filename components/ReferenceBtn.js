@@ -1,16 +1,12 @@
 import React from 'react'
 import Menu from 'core/frontend/common/menu/Menu'
-import icon from './reference-btn.svg'
 import styles from 'core/frontend/client/client-menu/client-menu.styl'
+import config from '../config'
+import icon from './reference-btn.svg'
 
-
-const ReferenceBtnComponent = () => {
-  const referenceUrl = "http://ya.ru" 
-
-  const open = () => {
-    window.location = referenceUrl
-  }
-
+const ReferenceBtnComponent = (props) => {
+  const open = () => window.location = config.urls[props.role || 'default'] 
+  
   return (
     <Menu
       icon={ icon }
