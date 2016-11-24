@@ -3,24 +3,24 @@ import ReferenceBtnComponent from '../components/ReferenceBtn'
 export default {
   name: 'Справка',
   options: [{
-      key: 'admin',
+      key: 'ADMIN',
       label: 'Ссылка на руководство для администратора',
       type: 'string'
     },
     {
-      key: 'manger',
+      key: 'EDITOR',
       label: 'Ссылка на руководство для менеджера',
       type: 'string'
     },
     {
-      key: 'default',
-      label: 'Руководство для незарегистрированного пользователя',
+      key: 'VIEWER',
+      label: 'Ссылка на руководство пользователя',
       type: 'string'
     }
   ],
   connects: {
     components: [
-      { component: ReferenceBtnComponent, position: 'clientMenu' },
+      { component: ReferenceBtnComponent, position: 'clientMenu' }
     ]
   }
 }
